@@ -1,0 +1,21 @@
+{
+  "name": "namastefood",
+  "version": "1.0.0",
+  "description": "Food delivery app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/Jayashree94/Reactproject.git)"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Jayashree",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
