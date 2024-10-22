@@ -1,6 +1,7 @@
 import Restocard from "./Restocard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import {Link} from "react-router-dom";
 const Body = () => {
   const [listofRestaurant, setlistofRestaurant] = useState([]);
   const [searchRestaurant, setSearchRestaurant] = useState([]);
@@ -49,8 +50,6 @@ const Body = () => {
               setSearchRestaurant(filteredRestaurant);
             }}
           >
-            {" "}
-            Search{" "}
           </button>
         </div>
         <button
@@ -68,7 +67,10 @@ const Body = () => {
       </div>
       <div className="resto-container">
         {searchRestaurant.map((restaurant) => {
-          return <Restocard key={restaurant.info.id} resData={restaurant} />;
+          return <Link 
+          key={restaurant.info.id} 
+          to= {"/restaurants/"+ restaurant.info.id} ><Restocard 
+          resData={restaurant}  /> </Link>;
         })}
       </div>
     </div>
